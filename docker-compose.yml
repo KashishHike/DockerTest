@@ -3,6 +3,7 @@ services:
   module1:
     build: ./DockerSub1/
     image: kashishhike/dockersub1:go2
+    command: dockerize -wait tcp://module2:4010 
     hostname: docker submodule 1
     ports:
       - "4008:80"
@@ -14,7 +15,7 @@ services:
     image: kashishhike/dockersub2:go2
     hostname: docker submodule 2
     ports:
-      - "40010:80"
+      - "4010:80"
     networks:
       - webnet
 
