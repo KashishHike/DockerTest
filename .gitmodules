@@ -1,3 +1,6 @@
 [submodule "DockerSub1"]
 	path = DockerSub1
 	url = https://github.com/KashishHike/DockerSub1.git
+[submodule "DockerSub2"]
+	path = DockerSub2
+	url = https://github.com/KashishHike/DockerSub2.git
