@@ -8,7 +8,7 @@ WORKDIR /Users/kashish/Documents/temp/
 ADD . /Users/kashish/Documents/temp/
 
 # Install dockerize to be used in docker-compose
-RUN sed -i -e 's/:\/\/(archive.ubuntu.com\|security.ubuntu.com)/old-releases.ubuntu.com/g' /etc/apt/sources.list && apt-get install -y wget && wget https://github.com/jwilder/dockerize/releases/download/v0.1.0/dockerize-linux-amd64-v0.1.0.tar.gz && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-v0.1.0.tar.gz
+RUN sed -i -e 's/:\/\/(archive.ubuntu.com\|security.ubuntu.com)/old-releases.ubuntu.com/g' /etc/apt/sources.list && wget https://github.com/jwilder/dockerize/releases/download/v0.1.0/dockerize-linux-amd64-v0.1.0.tar.gz && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-v0.1.0.tar.gz
 
 # Build all the dockers
 CMD ["docker-compose", "build"]
