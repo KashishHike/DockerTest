@@ -20,7 +20,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ] && ! [ -x "$(command -v doc
        bash docker-install-ubuntu.bash
 
        echo "Installing docker compose"
-       sudo bash compose-install.sh
+       bash compose-install.sh
 elif [ "$(expr substr $(uname -s) 1 5)" != "Linux" ] && [ "$(uname -s)" != "Darwin" ]; then
        echo "we support only mac and linux as of now. Keep watching for windows support"
        exit 0
