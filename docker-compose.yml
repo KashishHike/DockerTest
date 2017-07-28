@@ -2,7 +2,7 @@ version: "2"
 services:
   module1:
     build: ./DockerSub1/
-    image: kashishhike/dockersub1:go2
+    image: kashishhike/dockersub1:v1
     command: dockerize -wait tcp://module2:4010 
     hostname: docker submodule 1
     ports:
@@ -12,7 +12,7 @@ services:
 
   module2:
     build: ./DockerSub2/
-    image: kashishhike/dockersub2:go2
+    image: kashishhike/dockersub2:v1
     hostname: docker submodule 2
     ports:
       - "4010:80"

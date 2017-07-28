@@ -8,4 +8,4 @@ WORKDIR /Users/kashish/Documents/temp/
 ADD . /Users/kashish/Documents/temp/
 
 # Run app.py when the container launches
-CMD ["docker-compose", "build"]
+CMD ["docker-compose", "build", "--no-cache"]
